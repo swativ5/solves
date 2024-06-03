@@ -1,17 +1,20 @@
 import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 class helloworld    {
     public static void main(String args[])  {
-        String s = "hello";
-        HashMap<Character,Integer> map1 = new HashMap<>();
-        HashMap<Character,Integer> map2 = new HashMap<>();
-        char c = 'a';
-        map1.put(c, 1);
-        System.out.println(map1);
-        map1.put(c,map1.get(c) + 1);
-        System.out.println(map1);
-        System.out.println(map1.get(c));
-        map2.put('a',2);
-        System.out.println(map1.equals(map2));
+        String s = "cbaebabacd";
+        System.out.println(s.substring(6, 9));
 
+
+
+
+        String k[] = s.split("");
+        for(String i : k)   {
+            //System.out.println(i);
+        }
+        //System.out.println(k);
     }
 }
