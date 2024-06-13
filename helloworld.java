@@ -5,14 +5,16 @@ import java.util.Arrays;
 
 class helloworld    {
     public static void main(String args[])  {
-        String s = "cbaebabacd";
-        System.out.println(s.substring(6, 9));
+        String s = "0123456789";
+        String k = s.substring(0,10);
+        System.out.println(k.equals(s));
+        System.out.println(s.substring(0, 9));
 
 
 
 
-        String k[] = s.split("");
-        for(String i : k)   {
+        String m[] = s.split("");
+        for(String i : m)   {
             //System.out.println(i);
         }
         //System.out.println(k);

@@ -41,7 +41,6 @@ public class ValidAnagram {
             map2.put(c2, map2.getOrDefault(c2, 0) + 1);
         }
         return map1.equals(map2);
-
     }
 
     public static void main(String[] args) {
