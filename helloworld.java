@@ -18,5 +18,10 @@ class helloworld    {
             //System.out.println(i);
         }
         //System.out.println(k);
+
+        HashMap<Integer,Integer> map = new HashMap<>();
+        map.put(1, 9);
+        map.put(1,map.get(1)+1);
+        System.out.println(map);  
     }
 }
