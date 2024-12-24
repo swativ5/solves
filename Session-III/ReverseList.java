@@ -11,33 +11,44 @@ public class ReverseList {
         if (head == null)   {
             return null;
         }
-        ListNode nhead = new ListNode(head.val);
-        ListNode temp;
+        // in place reversal
+        ListNode previous = null;
 
-        while (head.next != null)   {
-            head = head.next;
-            temp = new ListNode(head.val);
-            temp.next = nhead;
-            nhead = temp;
+        while (head != null)    {
+            ListNode next_node = head.next;
+            head.next = previous;
+            previous = head;
+            head = next_node;
         }
-        return nhead;
-    }
+        return previous;
 
-    ListNode create_copy(ListNode head)  {
-        if (head == null)   {
-            return null;
-        }
-        ListNode nhead = new ListNode(head.val, null);
-        ListNode temp;
-        ListNode rhead = nhead;
+    //     ListNode nhead = new ListNode(head.val);
+    //     ListNode temp;
 
-        while (head.next != null)   {
-            head = head.next;
-            temp = new ListNode(head.val);
-            nhead.next = temp;
-            nhead = nhead.next;
-        }
-        return rhead;
+    //     while (head.next != null)   {
+    //         head = head.next;
+    //         temp = new ListNode(head.val);
+    //         temp.next = nhead;
+    //         nhead = temp;
+    //     }
+    //     return nhead;
+    // }
+
+    // ListNode create_copy(ListNode head)  {
+    //     if (head == null)   {
+    //         return null;
+    //     }
+    //     ListNode nhead = new ListNode(head.val, null);
+    //     ListNode temp;
+    //     ListNode rhead = nhead;
+
+    //     while (head.next != null)   {
+    //         head = head.next;
+    //         temp = new ListNode(head.val);
+    //         nhead.next = temp;
+    //         nhead = nhead.next;
+    //     }
+    //     return rhead;
     }
 
     void printList(ListNode head) {
@@ -56,7 +67,7 @@ public class ReverseList {
         System.out.println("Original List:");
         r.printList(head);
 
-        ListNode nhead = r.create_copy(head);
+        ListNode nhead = r.reverseList(head);
 
         System.out.println("Copied List:");
         r.printList(nhead);
