@@ -1,5 +1,7 @@
 # Session - III
 
+[Find Min](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/)
+
 [Has Cycle](https://leetcode.com/problems/linked-list-cycle/description/)
 
 [Reorder List](https://leetcode.com/problems/reorder-list/description/)
