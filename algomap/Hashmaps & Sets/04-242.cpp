@@ -1,17 +1,23 @@
 #include <bits/stdc++.h>
-#include <unordered_map>
 using namespace std;
 
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        unordered_map<char, int> s_map, t_map;
-        for (char c : s)    {
-            s_map[c]++;
+        if (s.length() != t.length()) {
+            return false;
         }
-        for (char c: t) {
-            t_map[c]++;
+        vector<int> freq(26, 0);
+        for (int i = 0; i < s.length(); i++)    {
+            freq[s[i] - 'a']++;
+            freq[t[i] - 'a']--;
         }
-        for ( it = s_map.begin(); )
+
+        for (int i = 0; i < 26; i++)    {
+            if (freq[i] != 0)   {
+                return false;
+            }
+        }
+        return true;
     }
 };
