@@ -10,3 +10,9 @@
 1881A - 61 mins
 1878A - 9 mins
 1877A - 11 mins
+
+1hour 50 mins 4 900 ranked questions solved on 14/12/2025
+1904A - 28 mins
+1883B - 26 mins
+1878C - 22 mins
+1875A - 32 mins
