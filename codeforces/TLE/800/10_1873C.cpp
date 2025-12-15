@@ -1,10 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<vector<int>> createmat(int n)
+long long targetpractice(vector<vector<char>> &input)
 {
-    vector<vector<int>> matrix(2 * n, vector<int>(2 * n));
-    // finsih
+    vector<vector<int>> matrix;
+    matrix = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+              {1, 2, 2, 2, 2, 2, 2, 2, 2, 1},
+              {1, 2, 3, 3, 3, 3, 3, 3, 2, 1},
+              {1, 2, 3, 4, 4, 4, 4, 3, 2, 1},
+              {1, 2, 3, 4, 5, 5, 4, 3, 2, 1},
+              {1, 2, 3, 4, 5, 5, 4, 3, 2, 1},
+              {1, 2, 3, 4, 4, 4, 4, 3, 2, 1},
+              {1, 2, 3, 3, 3, 3, 3, 3, 2, 1},
+              {1, 2, 2, 2, 2, 2, 2, 2, 2, 1},
+              {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}};
+    long long score = 0;
+    for (int i = 0; i < 10; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            if (input[i][j] == 'X')
+            {
+                score += matrix[i][j];
+            }
+        }
+    }
+    return score;
 }
 
 int main()
@@ -16,15 +37,16 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n;
-        cin >> n;
-        vector<int> arr(n - 1);
+        vector<vector<char>> input(10, vector<char>(10));
 
-        for (int i = 0; i < n - 1; i++)
+        for (int i = 0; i < 10; i++)
         {
-            cin >> arr[i];
+            for (int j = 0; j < 10; j++)
+            {
+                cin >> input[i][j];
+            }
         }
-        cout << goalsofvictory(arr) << "\n";
+        cout << targetpractice(input) << "\n";
     }
     return 0;
 }
