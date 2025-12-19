@@ -1,3 +1,8 @@
+1 hour 1 min on 3 800 ranked questions solved on 19/12/2025
+1857A - 11 mins
+1853A - 23 mins
+1845A - 27 mins
+
 1 hour 7 mins on 5 800 ranked questions solved on 15-16/12/2025
 1873C - 11 mins
 1866A - 6 mins
