@@ -24,26 +24,23 @@ public:
         ListNode(int x, ListNode *next) : val(x), next(next) {}
     };
 
-    ListNode *mergeTwoLists(ListNode *list1, ListNode *list2)
+    ListNode *removeNthFromEnd(ListNode *head, int n)
     {
-        ListNode *head = new ListNode(0);
-        ListNode *current = head;
+        ListNode *temp = new ListNode(0, head);
+        ListNode *slow = temp, *fast = temp;
 
-        while (list1 && list2)
+        for (int i = 0; i <= n; i++)
         {
-            if (list1->val < list2->val)
-            {
-                current->next = list1;
-                list1 = list1->next;
-            }
-            else
-            {
-                current->next = list2;
-                list2 = list2->next;
-            }
-            current = current->next;
+            fast = fast->next;
         }
-        current->next = (list1) ? list1 : list2;
-        return head->next;
+
+        while (fast)
+        {
+            slow = slow->next;
+            fast = fast->next;
+        }
+
+        slow->next = slow->next->next;
+        return temp->next;
     }
 };
